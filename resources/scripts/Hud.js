@@ -1,52 +1,52 @@
 class Hud {
-    constructor() {
-        this.scoreboards = [];
+  constructor() {
+    this.scoreboards = [];
+  }
+
+  update() {
+    this.scoreboards.forEach((s) => {
+      s.update(window.playerState.teachers[s.id]);
+    });
+  }
+
+  createElement() {
+    if (this.element) {
+      this.element.remove();
+      this.scoreboards = [];
     }
 
-    update() {
-        this.scoreboards.forEach((s) => {
-            s.update(window.playerState.teachers[s.id]);
-        });
-    }
+    this.element = document.createElement("div");
+    this.element.classList.add("Hud");
 
-    createElement() {
-        if (this.element) {
-            this.element.remove();
-            this.scoreboards = [];
-        }
+    const { playerState } = window;
+    playerState.lineup.forEach((key) => {
+      const teacher = playerState.teachers[key];
+      const scoreboard = new Combatant(
+        {
+          id: key,
+          ...teacher[teacher.teacherId],
+          ...teacher,
+        },
+        null
+      );
+      scoreboard.createElement();
+      this.scoreboards.push(scoreboard);
+      this.element.appendChild(scoreboard.hudElement);
+    });
+    this.update();
+  }
 
-        this.element = document.createElement("div");
-        this.element.classList.add("Hud");
+  init(container) {
+    this.createElement();
+    container.appendChild(this.element);
 
-        const { playerState } = window;
-        playerState.lineup.forEach((key) => {
-            const teacher = playerState.teachers[key];
-            const scoreboard = new Combatant(
-                {
-                    id: key,
-                    ...Teachers[teacher.teacherId],
-                    ...teacher,
-                },
-                null
-            );
-            scoreboard.createElement();
-            this.scoreboards.push(scoreboard);
-            this.element.appendChild(scoreboard.hudElement);
-        });
-        this.update();
-    }
+    document.addEventListener("PlayerStateUpdated", () => {
+      this.update();
+    });
 
-    init(container) {
-        this.createElement();
-        container.appendChild(this.element);
-
-        document.addEventListener("PlayerStateUpdated", () => {
-            this.update();
-        });
-
-        document.addEventListener("LineupChanged", () => {
-            this.createElement();
-            container.appendChild(this.element);
-        });
-    }
+    document.addEventListener("LineupChanged", () => {
+      this.createElement();
+      container.appendChild(this.element);
+    });
+  }
 }
