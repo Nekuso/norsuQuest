@@ -1,0 +1,45 @@
+.text__message {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    font-size: 16px;
+    padding: 4px;
+    background: var(--menu-background);
+    border-top: 1px solid var(--menu-border-color);
+    border-radius: .2rem;
+    color: var(--menu-font-color);
+}
+
+
+.text__message__p {
+    margin: 0;
+    font-size: 7px;
+    color: var(--menu-font-color);
+}
+
+
+.text__message span {
+    opacity: 0;
+}
+
+.text__message span.revealed {
+    opacity: 1;
+}
+
+.text__message__button {
+    margin: 0;
+    font-size: 8px;
+    padding: .5rem 0.3rem;
+    --webkit-appearance: none;
+    background: none;
+    border: 0;
+    font-family: inherit;
+    color: var(--menu-font-color);
+    cursor: pointer;
+
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+}
