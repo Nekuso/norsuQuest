@@ -1,1 +1,535 @@
-*{font-family:"Press Start 2P",cursive}:root{--border-color: #818181;--dialog-background: #FFF3B4;--menu-background: #2e2e2e;--menu-border-color: #5e5e5e;--menu-font-color: #ffffff;--menu-selected-background: #7fc2ff}*{font-family:"Press Start 2P",cursive;box-sizing:border-box}body{background:rgb(32,32,32);padding:0;margin:0;overflow:hidden;height:100vh;width:100vw}.game{height:100vh;width:100vw;display:flex;justify-content:center}.game__container{position:relative;width:352px;height:198px;outline:1px solid #fff;overflow:hidden;background:rgb(29,194,245);transform:scale(2.5) translateY(50%)}.game__container canvas{transform:scale(1.1);image-rendering:pixelated}.text__message{position:absolute;left:0;right:0;bottom:0;height:30px;font-size:16px;padding:4px;background:var(--menu-background);border-top:1px solid var(--menu-border-color);border-radius:.2rem;color:var(--menu-font-color)}.text__message__p{margin:0;font-size:7px;color:var(--menu-font-color)}.text__message span{opacity:0}.text__message span.revealed{opacity:1}.text__message__button{margin:0;font-size:8px;padding:.5rem .3rem;--webkit-appearance: none;background:none;border:0;font-family:inherit;color:var(--menu-font-color);cursor:pointer;position:absolute;right:2px;bottom:0}.SceneTransition{position:absolute;left:0;top:0;right:0;bottom:0;background:#fff;opacity:0;animation:scene-transition-fade-in 1.2s forwards}.SceneTransition.fade-out{animation:scene-transition-fade-out 1.2s forwards}@keyframes scene-transition-fade-in{0%{opacity:0}to{opacity:1}}@keyframes scene-transition-fade-out{0%{opacity:1}to{opacity:0}}.Battle{position:absolute;left:0;right:0;top:0;bottom:0;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAABjCAYAAAA7HYrfAAAAAXNSR0IArs4c6QAAAaVJREFUeJzt3DEuRUEYgNF5ckMoaDwVDY21KN/q7EGi1dmAZejQUDyhYQ+jePninH7uP8VXzE0ms3rYbH4GRC3r8/Nd7wGm7e16A/AXAiZNwKQJmDQBkyZg0gRMmoBJEzBpAiZNwKQJmDQBk7Y8Pj3teg8wbXm72ex6DzBtGWOMo4P96Q9sv77H6cnx9Pq39w/zzZ9ev1xeX42To8PpD7xvP8fF2Xp6/fPLq/nmT6/3E0eagEkTMGkCJk3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApK1u7+69D0zWMsb419fxzG/Pd4QgTcCkCZg0AZMmYNIETJqASRMwaQImTcCkCZg0AZMmYNIETJr7wKQtY4x/fZ/U/PZ8RwjSBEyagEkTMGkCJk3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApLkPTJr3gc1Pz3eEIE3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApAmYNAGTJmDSBEya+8CkeR/Y/PR8RwjSBEyagEkTMGkCJk3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApLkPTJr3gc1Pz3eEIO0XmUrpyjmFxWkAAAAASUVORK5CYII=);background-size:cover;image-rendering:pixelated}.Battle_hero,.Battle_enemy{position:absolute;transform:scale(2);width:32px;height:32px;overflow:hidden;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG1JREFUWIXt0sENgCAQRNGPsRBCDVah9WoV1EDsRC96MZHMHjw578pkGciCmZmZmZnZ36VIuOTpzs8vkQ2g7fVQZ46RAp2Ln+erOlD+gZKnRc0CtL1KJYbI0C9Ed0D6BfX14QJXiURnCSMLCHACI8ETVAg2qwsAAAAASUVORK5CYII=) no-repeat no-repeat}.Battle_hero img,.Battle_enemy img{pointer-events:none}.Battle_hero{bottom:57px;left:1px}.Battle_hero img{transform:translateY(-64px)}.Battle_enemy{top:42px;right:-1px}@keyframes battle-damage-blink{to{visibility:hidden}}.battle-damage-blink{animation:battle-damage-blink .3s steps(2,start) infinite}@keyframes battle-spin-right{0%{transform:translateZ(0) rotate(0) scale(2)}25%{transform:translate3d(155px,-30px,0) rotate(45deg) scale(2)}to{transform:translateZ(0) scale(2)}}.battle-spin-right{animation:battle-spin-right .8s}@keyframes battle-spin-left{0%{transform:translateZ(0) rotate(0) scale(2)}25%{transform:translate3d(-155px,30px,0) rotate(45deg) scale(2)}to{transform:translateZ(0) scale(2)}}.battle-spin-left{animation:battle-spin-left .8s}.glob-orb{position:absolute;width:32px;height:32px}@keyframes battle-glob-right{0%{transform:translateZ(0) scale(.5);opacity:1}50%{transform:translate3d(10px,-80px,0) scale(1);opacity:1}80%{transform:translate3d(149px,-47px,0) scale(1);opacity:1}to{transform:translate3d(149px,-47px,0) scale(3);opacity:0}}.battle-glob-right{left:70px;top:104px;animation:battle-glob-right 1s forwards}@keyframes battle-glob-left{0%{transform:translateZ(0) scale(.5);opacity:1}50%{transform:translate3d(-10px,-50px,0) scale(1);opacity:1}80%{transform:translate3d(-174px,47px,0) scale(1);opacity:1}to{transform:translate3d(-174px,47px,0) scale(3);opacity:0}}.battle-glob-left{left:227px;top:56px;animation:battle-glob-left 1s forwards}.Combatant{width:67px;height:19px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAOCAYAAACRkmStAAAAAXNSR0IArs4c6QAAAJ5JREFUSIljZEACOjo6/xmGGbhy5QojjA1n6Ojo/J8y6/LAuIiGICdNF+5hFnTJo6fo7yB6ARTPUsOjE9vEKTeECJBf9ZJkPRgxSwmY2CbOwMJCVSPx2kWqh6nuMjExMWobiRU8e/aMZD1MNHDHoAVUj1lyQpxegOqepVee/fPnD8l6RlSepapn86tejpyqh1xH0AuMqNKYEZkz3DsCAPQ7K8JdWO05AAAAAElFTkSuQmCC) no-repeat no-repeat;position:absolute}.Battle .Combatant{transform:scale(2);transition:opacity .4s}.Battle .Combatant[data-active=false]{opacity:0}.Battle .Combatant[data-active=true]{opacity:1}.Combatant[data-team=player]{left:46px;top:60px}.Combatant[data-team=enemy]{top:30px;right:77px}.Combatant_character_crop{position:absolute;bottom:6px;left:3px;width:18px;height:12px;overflow:hidden}.Combatant_character{display:block;position:absolute;left:-11px;bottom:-7px}.Battle .Combatant_character_crop{display:none}.Combatant_name{position:absolute;left:2px;top:-7px;white-space:nowrap;background:rgb(172,47,30);color:#fff;font-size:4px;padding:1px 2px;margin:0;border-radius:1px}.Combatant_type{position:absolute;left:4px;top:0;width:13px;height:13px}.Combatant_life-container{position:absolute;left:20px;top:4px;width:26px;height:3px}.Combatant_life-container>rect{transition:width .2s}.Combatant_xp-container{position:absolute;left:20px;top:8px;width:26px;height:2px}.Combatant_level{position:absolute;font-size:3px;right:4px;top:-1px;width:12px;height:11px;display:flex;align-items:center;justify-content:center;background:rgb(31,42,81);border:1px solid rgb(235,235,235);border-radius:50%;margin:0;color:#fff;font-weight:700}.Combatant_status{position:absolute;font-size:3px;right:11px;bottom:3px;padding-left:2px;padding-right:2px;background:rgba(0,0,0,.8);color:#fff;margin:0;background:hsl(212,72%,19%);border-radius:1px}.Combatant_status[data-status=regen]{color:#006811}.Combatant_status[data-status=confusion]{background:#590281}.Teacher{position:absolute;transform:scale(1.7);transition:opacity .4s,transform .4s;background:url(/public/images/characters/teachers/teacher-shadow.png) no-repeat no-repeat}.Teacher[data-team=player]{bottom:75px;left:51px}.Teacher[data-team=enemy]{top:65px;right:75px}.Teacher[data-active=false]{opacity:0;transform:translate3d(0,16px,0) scale(2)}.Teacher[data-active=true]{opacity:1;transform:translateZ(0) scale(2)}.Team{display:flex;position:absolute;top:4px;gap:4px}.Team[data-team=player]{left:4px}.Team[data-team=enemy]{right:4px}.Team .dead-teacher,.Team .active-teacher-indicator{display:none}.Team [data-dead=true] .dead-teacher,.Team [data-active=true] .active-teacher-indicator{display:block}.KeyboardMenu{border:1px solid var(--border-color);background:var(--menu-background);position:absolute;border-radius:3px}.KeyboardMenu button{display:flex;align-items:center;width:100%;text-align:left;-webkit-appearance:none;border:0;background:none;height:20px;cursor:pointer;font-family:inherit;padding:0 0 0 1em;font-size:7px;color:#fff;border-radius:2px}.KeyboardMenu button:focus{background:var(--menu-selected-background);outline:0;color:#000}.KeyboardMenu .option{position:relative}.KeyboardMenu .option .right{position:absolute;right:0;top:0;bottom:0;font-size:7px;display:flex;align-items:center;padding-right:10px;color:#fff}.DescriptionBox{position:absolute;bottom:0;left:0;color:#fff;border-top:1px solid var(--border-color);background:var(--menu-background);padding:6px;width:100%;max-width:200px;border-radius:3px 3px 0 0}.DescriptionBox p{font-size:7px;margin:0}.Battle .KeyboardMenu{right:0;bottom:0;width:140px}.Hud{position:absolute;left:2px;top:10px;image-rendering:pixelated}.Hud .Combatant{position:relative;margin-bottom:10px}.Hud .Combatant_type{display:none}.overlayMenu{position:absolute;left:4.5em;top:1em;right:4.5em;background:var(--menu-background);color:var(--menu-font-color);border:1px solid var(--menu-border-color);z-index:2;padding-left:8px;padding-right:8px;padding-bottom:6px;border-radius:3px}.overlayMenu .KeyboardMenu{position:relative;border:0}.overlayMenu h2{font-size:10px;color:var(--menu-font-color);margin:0;padding:6px 0;text-align:center;border-bottom:1px solid #dbdbdb}.TitleScreen{position:absolute;left:0;right:0;top:0;bottom:0;background:url(/norsuQuest/assets/norsuBackground-3c4716a1.gif);background-size:cover;background-position:center;background-repeat:no-repeat}.TitleScreen_logo{display:block;margin:0 auto;width:128px;image-rendering:pixelated;animation:scale 5s ease-in-out}.TitleScreen .KeyboardMenu{position:relative;width:100px;margin:0 auto;background:transparent;border:0}.TitleScreen button{color:#fff;justify-content:center;padding:0}.TitleScreen .DescriptionBox{display:flex;justify-content:center;background:transparent;color:#fff;border:0;text-align:center}@keyframes scale{0%{transform:scale(0)}to{transform:scale(1)}}
+* {
+  font-family: "Press Start 2P", cursive;
+}
+:root {
+  --border-color: #818181;
+  --dialog-background: #fff3b4;
+  --menu-background: #2e2e2e;
+  --menu-border-color: #5e5e5e;
+  --menu-font-color: #ffffff;
+  --menu-selected-background: #7fc2ff;
+}
+* {
+  font-family: "Press Start 2P", cursive;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(32, 32, 32);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.game {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.game__container {
+  position: relative;
+  width: 352px;
+  height: 198px;
+  outline: 1px solid #fff;
+  overflow: hidden;
+  background: rgb(29, 194, 245);
+  transform: scale(2.5) translateY(50%);
+}
+.game__container canvas {
+  transform: scale(1.1);
+  image-rendering: pixelated;
+}
+.text__message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 30px;
+  font-size: 16px;
+  padding: 4px;
+  background: var(--menu-background);
+  border-top: 1px solid var(--menu-border-color);
+  border-radius: 0.2rem;
+  color: var(--menu-font-color);
+}
+.text__message__p {
+  margin: 0;
+  font-size: 7px;
+  color: var(--menu-font-color);
+}
+.text__message span {
+  opacity: 0;
+}
+.text__message span.revealed {
+  opacity: 1;
+}
+.text__message__button {
+  margin: 0;
+  font-size: 8px;
+  padding: 0.5rem 0.3rem;
+  --webkit-appearance: none;
+  background: none;
+  border: 0;
+  font-family: inherit;
+  color: var(--menu-font-color);
+  cursor: pointer;
+  position: absolute;
+  right: 2px;
+  bottom: 0;
+}
+.SceneTransition {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  opacity: 0;
+  animation: scene-transition-fade-in 1.2s forwards;
+}
+.SceneTransition.fade-out {
+  animation: scene-transition-fade-out 1.2s forwards;
+}
+@keyframes scene-transition-fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scene-transition-fade-out {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.Battle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAABjCAYAAAA7HYrfAAAAAXNSR0IArs4c6QAAAaVJREFUeJzt3DEuRUEYgNF5ckMoaDwVDY21KN/q7EGi1dmAZejQUDyhYQ+jePninH7uP8VXzE0ms3rYbH4GRC3r8/Nd7wGm7e16A/AXAiZNwKQJmDQBkyZg0gRMmoBJEzBpAiZNwKQJmDQBk7Y8Pj3teg8wbXm72ex6DzBtGWOMo4P96Q9sv77H6cnx9Pq39w/zzZ9ev1xeX42To8PpD7xvP8fF2Xp6/fPLq/nmT6/3E0eagEkTMGkCJk3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApK1u7+69D0zWMsb419fxzG/Pd4QgTcCkCZg0AZMmYNIETJqASRMwaQImTcCkCZg0AZMmYNIETJr7wKQtY4x/fZ/U/PZ8RwjSBEyagEkTMGkCJk3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApLkPTJr3gc1Pz3eEIE3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApAmYNAGTJmDSBEya+8CkeR/Y/PR8RwjSBEyagEkTMGkCJk3ApAmYNAGTJmDSBEyagEkTMGkCJk3ApLkPTJr3gc1Pz3eEIO0XmUrpyjmFxWkAAAAASUVORK5CYII=);
+  background-size: cover;
+  image-rendering: pixelated;
+}
+.Battle_hero,
+.Battle_enemy {
+  position: absolute;
+  transform: scale(2);
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAG1JREFUWIXt0sENgCAQRNGPsRBCDVah9WoV1EDsRC96MZHMHjw578pkGciCmZmZmZnZ36VIuOTpzs8vkQ2g7fVQZ46RAp2Ln+erOlD+gZKnRc0CtL1KJYbI0C9Ed0D6BfX14QJXiURnCSMLCHACI8ETVAg2qwsAAAAASUVORK5CYII=)
+    no-repeat no-repeat;
+}
+.Battle_hero img,
+.Battle_enemy img {
+  pointer-events: none;
+}
+.Battle_hero {
+  bottom: 57px;
+  left: 1px;
+}
+.Battle_hero img {
+  transform: translateY(-64px);
+}
+.Battle_enemy {
+  top: 42px;
+  right: -1px;
+}
+@keyframes battle-damage-blink {
+  to {
+    visibility: hidden;
+  }
+}
+.battle-damage-blink {
+  animation: battle-damage-blink 0.3s steps(2, start) infinite;
+}
+@keyframes battle-spin-right {
+  0% {
+    transform: translateZ(0) rotate(0) scale(2);
+  }
+  25% {
+    transform: translate3d(155px, -30px, 0) rotate(45deg) scale(2);
+  }
+  to {
+    transform: translateZ(0) scale(2);
+  }
+}
+.battle-spin-right {
+  animation: battle-spin-right 0.8s;
+}
+@keyframes battle-spin-left {
+  0% {
+    transform: translateZ(0) rotate(0) scale(2);
+  }
+  25% {
+    transform: translate3d(-155px, 30px, 0) rotate(45deg) scale(2);
+  }
+  to {
+    transform: translateZ(0) scale(2);
+  }
+}
+.battle-spin-left {
+  animation: battle-spin-left 0.8s;
+}
+.glob-orb {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+@keyframes battle-glob-right {
+  0% {
+    transform: translateZ(0) scale(0.5);
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(10px, -80px, 0) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate3d(149px, -47px, 0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(149px, -47px, 0) scale(3);
+    opacity: 0;
+  }
+}
+.battle-glob-right {
+  left: 70px;
+  top: 104px;
+  animation: battle-glob-right 1s forwards;
+}
+@keyframes battle-glob-left {
+  0% {
+    transform: translateZ(0) scale(0.5);
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(-10px, -50px, 0) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate3d(-174px, 47px, 0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-174px, 47px, 0) scale(3);
+    opacity: 0;
+  }
+}
+.battle-glob-left {
+  left: 227px;
+  top: 56px;
+  animation: battle-glob-left 1s forwards;
+}
+.Combatant {
+  width: 67px;
+  height: 19px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAOCAYAAACRkmStAAAAAXNSR0IArs4c6QAAAJ5JREFUSIljZEACOjo6/xmGGbhy5QojjA1n6Ojo/J8y6/LAuIiGICdNF+5hFnTJo6fo7yB6ARTPUsOjE9vEKTeECJBf9ZJkPRgxSwmY2CbOwMJCVSPx2kWqh6nuMjExMWobiRU8e/aMZD1MNHDHoAVUj1lyQpxegOqepVee/fPnD8l6RlSepapn86tejpyqh1xH0AuMqNKYEZkz3DsCAPQ7K8JdWO05AAAAAElFTkSuQmCC)
+    no-repeat no-repeat;
+  position: absolute;
+}
+.Battle .Combatant {
+  transform: scale(2);
+  transition: opacity 0.4s;
+}
+.Battle .Combatant[data-active="false"] {
+  opacity: 0;
+}
+.Battle .Combatant[data-active="true"] {
+  opacity: 1;
+}
+.Combatant[data-team="player"] {
+  left: 46px;
+  top: 60px;
+}
+.Combatant[data-team="enemy"] {
+  top: 30px;
+  right: 77px;
+}
+.Combatant_character_crop {
+  position: absolute;
+  bottom: 6px;
+  left: 3px;
+  width: 18px;
+  height: 12px;
+  overflow: hidden;
+}
+.Combatant_character {
+  display: block;
+  position: absolute;
+  left: -11px;
+  bottom: -7px;
+}
+.Battle .Combatant_character_crop {
+  display: none;
+}
+.Combatant_name {
+  position: absolute;
+  left: 2px;
+  top: -7px;
+  white-space: nowrap;
+  background: rgb(172, 47, 30);
+  color: #fff;
+  font-size: 4px;
+  padding: 1px 2px;
+  margin: 0;
+  border-radius: 1px;
+}
+.Combatant_type {
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 13px;
+  height: 13px;
+}
+.Combatant_life-container {
+  position: absolute;
+  left: 20px;
+  top: 4px;
+  width: 26px;
+  height: 3px;
+}
+.Combatant_life-container > rect {
+  transition: width 0.2s;
+}
+.Combatant_xp-container {
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  width: 26px;
+  height: 2px;
+}
+.Combatant_level {
+  position: absolute;
+  font-size: 3px;
+  right: 4px;
+  top: -1px;
+  width: 12px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(31, 42, 81);
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 50%;
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+}
+.Combatant_status {
+  position: absolute;
+  font-size: 3px;
+  right: 11px;
+  bottom: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  margin: 0;
+  background: hsl(212, 72%, 19%);
+  border-radius: 1px;
+}
+.Combatant_status[data-status="regen"] {
+  color: #006811;
+}
+.Combatant_status[data-status="confusion"] {
+  background: #590281;
+}
+.Teacher {
+  position: absolute;
+  transform: scale(1.7);
+  transition: opacity 0.4s, transform 0.4s;
+  background: url(/public/images/characters/teachers/teacher-shadow.png)
+    no-repeat no-repeat;
+}
+.Teacher[data-team="player"] {
+  bottom: 75px;
+  left: 51px;
+}
+.Teacher[data-team="enemy"] {
+  top: 65px;
+  right: 75px;
+}
+.Teacher[data-active="false"] {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0) scale(2);
+}
+.Teacher[data-active="true"] {
+  opacity: 1;
+  transform: translateZ(0) scale(2);
+}
+.Team {
+  display: flex;
+  position: absolute;
+  top: 4px;
+  gap: 4px;
+}
+.Team[data-team="player"] {
+  left: 4px;
+}
+.Team[data-team="enemy"] {
+  right: 4px;
+}
+.Team .dead-teacher,
+.Team .active-teacher-indicator {
+  display: none;
+}
+.Team [data-dead="true"] .dead-teacher,
+.Team [data-active="true"] .active-teacher-indicator {
+  display: block;
+}
+.KeyboardMenu {
+  border: 1px solid var(--border-color);
+  background: var(--menu-background);
+  position: absolute;
+  border-radius: 3px;
+}
+.KeyboardMenu button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  height: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0 0 0 1em;
+  font-size: 7px;
+  color: #fff;
+  border-radius: 2px;
+}
+.KeyboardMenu button:focus {
+  background: var(--menu-selected-background);
+  outline: 0;
+  color: #000;
+}
+.KeyboardMenu .option {
+  position: relative;
+}
+.KeyboardMenu .option .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  color: #fff;
+}
+.DescriptionBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  border-top: 1px solid var(--border-color);
+  background: var(--menu-background);
+  padding: 6px;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 3px 3px 0 0;
+}
+.DescriptionBox p {
+  font-size: 7px;
+  margin: 0;
+}
+.Battle .KeyboardMenu {
+  right: 0;
+  bottom: 0;
+  width: 140px;
+}
+.Hud {
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  image-rendering: pixelated;
+}
+.Hud .Combatant {
+  position: relative;
+  margin-bottom: 10px;
+}
+.Hud .Combatant_type {
+  display: none;
+}
+.overlayMenu {
+  position: absolute;
+  left: 4.5em;
+  top: 1em;
+  right: 4.5em;
+  background: var(--menu-background);
+  color: var(--menu-font-color);
+  border: 1px solid var(--menu-border-color);
+  z-index: 2;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 6px;
+  border-radius: 3px;
+}
+.overlayMenu .KeyboardMenu {
+  position: relative;
+  border: 0;
+}
+.overlayMenu h2 {
+  font-size: 10px;
+  color: var(--menu-font-color);
+  margin: 0;
+  padding: 6px 0;
+  text-align: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+.TitleScreen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(/norsuQuest/assets/norsuBackground-3c4716a1.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.TitleScreen_logo {
+  display: block;
+  margin: 0 auto;
+  width: 128px;
+  image-rendering: pixelated;
+  animation: scale 5s ease-in-out;
+}
+.TitleScreen .KeyboardMenu {
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+  background: transparent;
+  border: 0;
+}
+.TitleScreen button {
+  color: #fff;
+  justify-content: center;
+  padding: 0;
+}
+.TitleScreen .DescriptionBox {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  text-align: center;
+}
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
