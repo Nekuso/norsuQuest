@@ -1,0 +1,54 @@
+.TitleScreen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(/public/images/ui/norsuBackground.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.TitleScreen_logo {
+  display: block;
+  margin: 0 auto;
+  width: 128px;
+  image-rendering: pixelated;
+  animation: scale 5s ease-in-out;
+  
+}
+
+.TitleScreen .KeyboardMenu {
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+  background: transparent;
+  border: 0;
+}
+.TitleScreen button {
+  color: #fff;
+  justify-content: center;
+  padding:0;
+}
+
+.TitleScreen .DescriptionBox {
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  text-align: center;
+}
+
+
+/* make animation that scales from 0 to 100% */
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
