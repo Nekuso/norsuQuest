@@ -6,22 +6,18 @@
     <img height="auto" width="auto" src="resources/images/check-it-out.svg"/>
 </p>
 
+[![Play Now](nekuso.github.io/norsuQuest/)](nekuso.github.io/norsuQuest/)
 # 🎮 Overview
 
 NORSU QUEST is a nostalgic journey into the world of retro-inspired RPG games, drawing inspiration from classic Pokemon games. Embark on an epic adventure inside the campus of NORSU, Call in teachers from departments, and explore a vibrant, pixelated world filled with quests and challenges.
 
 # ✨ Features v1.0
 
-<div float="left">
-<img src="resources/images/characters/teachers/i001.png" width="200"/>
+- Explore a vast and pixelated world.
+- Collect and train unique teachers.
+- Engage in exciting turn-based battles.
+- Solve puzzles and uncover hidden secrets.
+- Customize your teacher's journey.
+- Experience the magic of retro-style graphics.
 
-<div>
-    <p>Explore a vast and pixelated world.</p>
-    <p>Collect and train unique teachers.</p>
-    <p>Engage in exciting turn-based battles.</p>
-    <p>Solve puzzles and uncover hidden secrets.</p>
-    <p>Customize your teacher's journey.</p>
-    <p>Experience the magic of retro-style graphics.</p>
-</div>
-
-</div>
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
