@@ -2,7 +2,7 @@
   <img style="width: 100%; height:auto;" src="resources/images/Banner.png" alt="NORSU QUEST Banner">
 </div>
 
-# NORSU QUEST
+<h1 style="font-size: 4rem;" align="center">NORSU QUEST</h1>
 
 ## Overview
 
