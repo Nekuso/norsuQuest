@@ -8,28 +8,9 @@ class Progress {
   }
 
   save() {
-    var loggedUser = document
-      .getElementById("logged-user")
-      .getAttribute("data-user");
-
-    const data = {
-      loggedUser: loggedUser,
-      mapId: this.mapId,
-      startingHeroX: this.startingHeroX,
-      startingHeroY: this.startingHeroY,
-      startingHeroDirection: this.startingHeroDirection,
-      playerState: {
-        teachers: playerState.teachers,
-        lineup: playerState.lineup,
-        items: playerState.items,
-        storyFlags: playerState.storyFlags,
-      },
-    };
-
     window.localStorage.setItem(
       this.saveFileKey,
       JSON.stringify({
-        loggedUser: loggedUser,
         mapId: this.mapId,
         startingHeroX: this.startingHeroX,
         startingHeroY: this.startingHeroY,

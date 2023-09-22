@@ -60,14 +60,29 @@
           <canvas class="game__canvas" width="352" height="198"> </canvas>
         </div>
       </div>
-      <h2>
-        Use ASWD to move and ENTER
-      </h2>
+
+      <audio
+        id="audioRef"
+        src="resources/music/titleMusic.mp3"
+        autoplay
+        loop="true"
+        muted="muted"
+      ></audio>
+      <h2>Use ASWD to move and ENTER</h2>
       <h2>
         Made with ❤️ + ☕ by
         <a href="https://github.com/Nekuso" target="_blank">Nekuso</a>
       </h2>
     </div>
+
+    <script>
+      setTimeout(() => {
+        document.getElementById("audioRef").muted = false;
+      }, 800);
+      setTimeout(() => {
+        document.getElementById("audioRef").play();
+      }, 2000);
+    </script>
 
     <!-- Content -->
     <script src="scripts/Content/teachers.js"></script>
