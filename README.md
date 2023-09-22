@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="resources/images/logo.png" alt="NORSU QUEST Banner">
+  <img styl="width: 300px; height:300px;" src="resources/images/logo.png" alt="NORSU QUEST Banner">
 </div>
 
 # NORSU QUEST
@@ -16,4 +16,3 @@ NORSU QUEST is a nostalgic journey into the world of retro-inspired RPG games, d
 - Solve puzzles and uncover hidden secrets.
 - Customize your teacher's journey.
 - Experience the magic of retro-style graphics.
-
