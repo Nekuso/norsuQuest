@@ -12,18 +12,16 @@ NORSU QUEST is a nostalgic journey into the world of retro-inspired RPG games, d
 
 # ✨ Features v1.0
 
-<div align="left">
-<img src="resources/images/characters/teachers/i002.png"/>
+<div float="left">
+<img src="resources/images/characters/teachers/i001.png" width="200"/>
 
 <div>
-
-- Explore a vast and pixelated world.
-- Collect and train unique teachers.
-- Engage in exciting turn-based battles.
-- Solve puzzles and uncover hidden secrets.
-- Customize your teacher's journey.
-- Experience the magic of retro-style graphics.
-
+    <p>Explore a vast and pixelated world.</p>
+    <p>Collect and train unique teachers.</p>
+    <p>Engage in exciting turn-based battles.</p>
+    <p>Solve puzzles and uncover hidden secrets.</p>
+    <p>Customize your teacher's journey.</p>
+    <p>Experience the magic of retro-style graphics.</p>
 </div>
 
 </div>
