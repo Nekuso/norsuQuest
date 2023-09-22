@@ -123,8 +123,8 @@
   position: absolute;
   transform: scale(1.7);
   transition: opacity 0.4s, transform 0.4s;
-  background: url(resources/images/characters/teachers/teacher-shadow.png)
-    no-repeat no-repeat;
+  background: url("../images/characters/teachers/teacher-shadow.png") no-repeat
+    no-repeat;
 }
 .Teacher[data-team="player"] {
   bottom: 75px;
