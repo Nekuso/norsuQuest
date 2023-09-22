@@ -6,10 +6,9 @@
     <img height="auto" width="auto" src="resources/images/check-it-out.svg"/>
 </p>
 
-[![Play Now](nekuso.github.io/norsuQuest/)](nekuso.github.io/norsuQuest/)
 # 🎮 Overview
 
-NORSU QUEST is a nostalgic journey into the world of retro-inspired RPG games, drawing inspiration from classic Pokemon games. Embark on an epic adventure inside the campus of NORSU, Call in teachers from departments, and explore a vibrant, pixelated world filled with quests and challenges.
+NORSU QUEST is a nostalgic journey into the world of retro-inspired RPG games, drawing inspiration from classic Pokemon games. Embark on an epic adventure inside the campus of NORSU, Call in teachers from departments, and explore a vibrant, pixelated world filled with quests and challenges. <a href="nekuso.github.io/norsuQuest/">PLAY NOW</a>
 
 # ✨ Features v1.0
 
