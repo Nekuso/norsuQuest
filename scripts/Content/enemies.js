@@ -1,7 +1,7 @@
 window.Enemies = {
     guard: {
         name: "Security Guard",
-        src: "/images/characters/people/guard.png",
+        src: "resources/images/characters/people/guard.png",
         teachers: {
             a: {
                 teacherId: "i002",
@@ -17,7 +17,7 @@ window.Enemies = {
     },
     npc1: {
         name: "npc1",
-        src: "/images/characters/people/npc1.png",
+        src: "resources/images/characters/people/npc1.png",
         teachers: {
             a: {
                 hp: 50,
@@ -35,7 +35,7 @@ window.Enemies = {
     },
     npc2: {
         name: "npc2",
-        src: "/images/characters/people/npc2.png",
+        src: "resources/images/characters/people/npc2.png",
         teachers: {
             a: {
                 hp: 50,
@@ -53,7 +53,7 @@ window.Enemies = {
     },
     npc4: {
         name: "npc4",
-        src: "/images/characters/people/npc4.png",
+        src: "resources/images/characters/people/npc4.png",
         teachers: {
             a: {
                 hp: 40,

@@ -33,7 +33,7 @@ class TitleScreen {
     this.element = document.createElement("div");
     this.element.classList.add("TitleScreen");
     this.element.innerHTML = `
-        <img class="TitleScreen_logo" src="/images/logo.png" alt="Norsu Quest" />
+        <img class="TitleScreen_logo" src="resources/images/logo.png" alt="Norsu Quest" />
       `;
   }
 

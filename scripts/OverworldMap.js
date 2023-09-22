@@ -116,8 +116,8 @@ class OverworldMap {
 window.OverworldMaps = {
   HomeRoom: {
     id: "HomeRoom",
-    lowerSrc: "/images/maps/HomeLower.png",
-    upperSrc: "/images/maps/HomeUpper.png",
+    lowerSrc: "resources/images/maps/HomeLower.png",
+    upperSrc: "resources/images/maps/HomeUpper.png",
     configObjects: {
       hero: {
         type: "Person",
@@ -129,7 +129,7 @@ window.OverworldMaps = {
         type: "Person",
         x: utils.withGrid(4),
         y: utils.withGrid(8),
-        src: "/images/characters/people/mom.png",
+        src: "resources/images/characters/people/mom.png",
         behaviorLoop: [
           { type: "walk", direction: "left", time: 4000 },
           { type: "stand", direction: "up", time: 2000 },
@@ -163,7 +163,7 @@ window.OverworldMaps = {
         type: "Person",
         x: utils.withGrid(3),
         y: utils.withGrid(4),
-        src: "/images/characters/people/dad.png",
+        src: "resources/images/characters/people/dad.png",
         behaviorLoop: [{ type: "stand", direction: "up", time: 2000 }],
         talking: [
           {
@@ -275,8 +275,8 @@ window.OverworldMaps = {
 
   Outside: {
     id: "Outside",
-    lowerSrc: "/images/maps/OutsideLower.png",
-    upperSrc: "/images/maps/OutsideUpper.png",
+    lowerSrc: "resources/images/maps/OutsideLower.png",
+    upperSrc: "resources/images/maps/OutsideUpper.png",
     configObjects: {
       hero: {
         type: "Person",
@@ -290,7 +290,7 @@ window.OverworldMaps = {
         type: "Person",
         x: utils.withGrid(27),
         y: utils.withGrid(8),
-        src: "/images/characters/people/npc1.png",
+        src: "resources/images/characters/people/npc1.png",
         behaviorLoop: [
           { type: "stand", direction: "left", time: 3000 },
           { type: "stand", direction: "up", time: 3000 },
@@ -323,7 +323,7 @@ window.OverworldMaps = {
         type: "Person",
         x: utils.withGrid(15),
         y: utils.withGrid(6),
-        src: "/images/characters/people/npc2.png",
+        src: "resources/images/characters/people/npc2.png",
         behaviorLoop: [
           { type: "walk", direction: "down" },
           { type: "walk", direction: "down" },
@@ -372,7 +372,7 @@ window.OverworldMaps = {
         type: "Person",
         x: utils.withGrid(18),
         y: utils.withGrid(15),
-        src: "/images/characters/people/npc3.png",
+        src: "resources/images/characters/people/npc3.png",
         behaviorLoop: [
           { type: "stand", direction: "up", time: 6000 },
           { type: "walk", direction: "left" },
@@ -410,7 +410,7 @@ window.OverworldMaps = {
         type: "Person",
         x: utils.withGrid(22),
         y: utils.withGrid(5),
-        src: "/images/characters/people/npc4.png",
+        src: "resources/images/characters/people/npc4.png",
         behaviorLoop: [
           { type: "stand", direction: "down", time: 2100 },
           { type: "stand", direction: "left", time: 5000 },
@@ -434,7 +434,7 @@ window.OverworldMaps = {
         type: "Person",
         x: utils.withGrid(18),
         y: utils.withGrid(10),
-        src: "/images/characters/people/guard.png",
+        src: "resources/images/characters/people/guard.png",
 
         talking: [
           {

@@ -3,7 +3,7 @@ class TeacherStone extends GameObject {
         super(config);
         this.sprite = new Sprite({
             gameObject: this,
-            src: "/images/characters/teacher-stone.png",
+            src: "resources/images/characters/teacher-stone.png",
             animations: {
                 "used-down": [[0, 0]],
                 "unused-down": [[1, 0]],
