@@ -1,5 +1,5 @@
 <div align="center">
-  <img style="width: 300px; height:300px;" src="resources/images/logo.png" alt="NORSU QUEST Banner">
+  <img style="width: 300px; height:300px;" src="resources/images/Banner.png" alt="NORSU QUEST Banner">
 </div>
 
 # NORSU QUEST
