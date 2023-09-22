@@ -2,9 +2,13 @@
   <img style="width: 100%; height:auto;" src="resources/images/Banner.png" alt="NORSU QUEST Banner">
 </div>
 
-<h1 style="font-size: 7rem; font-style: bold;" align="center">NORSU QUEST</h1>
+<p style="font-size: 100px; font-style: bold;" align="center">NORSU QUEST</p>
+<p align="left">
+    <img height="auto" width="auto" src="https://forthebadge.com/images/badges/built-with-love.svg"/>
+    <img height="auto" width="auto" src="/src/img/check-it-out.svg"/>
+</p>
 
-<h1 style="font-size: 7rem; font-style: bold;" align="left">📙 Overview</h1>
+<p style="font-size: 7rem; font-style: bold;" align="left">📙 Overview</p>
 
 NORSU QUEST is a nostalgic journey into the world of retro-inspired RPG games, drawing inspiration from classic Pokemon games. Embark on an epic adventure inside the campus of NORSU, Call in teachers from departments, and explore a vibrant, pixelated world filled with quests and challenges.
 
