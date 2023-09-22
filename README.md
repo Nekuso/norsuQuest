@@ -2,9 +2,9 @@
   <img style="width: 100%; height:auto;" src="resources/images/Banner.png" alt="NORSU QUEST Banner">
 </div>
 
-<h1 style="font-size: 4rem;" align="center">NORSU QUEST</h1>
+<h1 style="font-size: 7rem; font-style: bold;" align="center">NORSU QUEST</h1>
 
-## Overview
+<h1 style="font-size: 7rem; font-style: bold;" align="left">📙 Overview</h1>
 
 NORSU QUEST is a nostalgic journey into the world of retro-inspired RPG games, drawing inspiration from classic Pokemon games. Embark on an epic adventure inside the campus of NORSU, Call in teachers from departments, and explore a vibrant, pixelated world filled with quests and challenges.
 
